@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div class="items_1">
+      <ul id="item">
+        <li>items_1</li>
+        <li>items_2</li>
+        <li>items_3</li>
+        <li>items_4</li>
+        <li>items_5</li>
+        <li>items_6</li>
+        <li>items_7</li>
+        <li>items_8</li>
+        <li>items_9</li>
+        <li>items_10</li>
+      </ul>
+    </div>
+    <div class="items_2">
+      <p></p>
+    </div>
+    <div class="items_3">
+      <h1></h1>
+    </div>
+    <div class="items_4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta assumenda architecto minima porro a natus eos necessitatibus, dolorum eaque tempora repudiandae quod reprehenderit maiores velit veniam id optio! Quidem, sed.
+    </div>
+    <div class="items_5"><span></span></div>
+    <input type="button" value="?">
+  </div>
+  <script>
+    document.querySelector("#root>input").addEventListener('click', papago)
+    function papago() {
+      alert("clicked button")
+    }
+
+
+    function color(a,b,c) {
+      style = {
+        selector : document.querySelector(a),
+        color : b
+      }
+    }
+
+    let test = color("#root>div>ul>li:nth-child(5)","red");
+    test.selector.color="red";
+    
+
+  </script>
+</body>
+</html>
