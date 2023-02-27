@@ -1,0 +1,37 @@
+<!DOCTYinputtml>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    function C_button (a, b, c, d) {
+      let obj = {
+        input : document.createElement(a),
+        body : a.type=b,
+        footer : a.value=c,
+        root_div : document.querySelector(d)
+      }
+      return obj;
+    }
+
+    let createButton = C_button("input","button",":D", "#root");
+    let root = createButton.root_div;
+    let inputButton = createButton.input;
+    inputButton.type = createButton.body;
+    inputButton.value = createButton.footer;
+    root.appendChild(inputButton);
+    inputButton.addEventListener('click', cCc)
+
+    function cCc() {
+      console.log(createButton.root_div)
+    }
+    
+    console.log(document.querySelector("#root > input:nth-child(1)"))
+  </script>
+</input>
+</html>
